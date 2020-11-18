@@ -1,12 +1,173 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
   </head>
-  <body>
-
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">HTML и CSS, уровень 2</a>».</p>
-
+  <body class="page__body">
+    <header class="page-header">
+      <a class="page-header__logo-picture" href="index.html">
+        <img src="https://via.placeholder.com/33x38" alt="Кэт энерджи - логотип">
+      </a>
+      <a class="page-header__logo-name" href="index.html">
+        <img src="https://via.placeholder.com/101x18" alt="Кэт энерджи">
+      </a>
+      <nav class="main-nav">
+        <button class="main-nav__toggle" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__list">
+            <li class="main-nav__item main-nav__item--active">
+              <a href="index.html">Главная</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="catalog.html">Каталог продукции</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="form.html">Подбор программы</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main class="page-main">
+      <section class="promo">
+        <h1 class="promo__title">Функциональное <br> питание для котов</h1>
+        <h2 class="promo__tagline">Занялся собой? Займись котом!</h2>
+        <img class="promo__product-image" src="https://via.placeholder.com/280x270" alt="Корм кэт энерджи">
+        <button class="page-main__pick-program-button" type="button">
+          <span><a href="form.html">Подобрать программу</a></span>
+        </button>
+      </section>
+      <section class="options">
+        <p2 class="visually-hidden">Каталоги</p2>
+        <div class="options__wrapper">
+          <ul class="options-list">
+            <li class="options-item options-item--slim">
+              <img class="options-item__image" src="https://via.placeholder.com/50x53">
+              <h3 class="options-item__option">Похудение</h3>
+              <p class="options-item__description">
+                Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.
+              </p>
+              <hr>
+              <button class="options-item__link-button">
+                <span><a href="#">Каталог Slim</a></span>
+              </button>
+            </li>
+            <li class="options-item options-item--gain">
+              <img class="options-item__image" src="https://via.placeholder.com/50x53">
+              <h3 class="options-item__option">Набор массы</h3>
+              <p class="options-item__description">
+                Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!
+              </p>
+              <hr>
+              <button class="options-item__link-button">
+                <span><a href="#">Каталог Pro</a></span>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="product-description">
+        <h2 class="product-description__title">Как это работает</h2>
+        <ul class="product-description__list">
+          <li class="product-description__item product-description__item--nutritious">
+            <img class="product-description__image" src="https://via.placeholder.com/60x60">
+            <p class="product-description__description">
+              Функциональное питание <br>
+              содержит только полезные <br>
+              питательные вещества.
+            </p>
+          </li>
+          <li class="product-description__item product-description__item--powder">
+            <img class="product-description__image" src="https://via.placeholder.com/60x60">
+            <p class="product-description__description">
+              Выпускается в виде порошка, <br>
+              который нужно лишь залить <br>
+              кипятком и готово.
+            </p>
+          </li>
+          <li class="product-description__item product-description__item--functional">
+            <img class="product-description__image" src="https://via.placeholder.com/60x60">
+            <p class="product-description__description">
+              Замените один-два приема <br>
+              обычной еды на наше <br>
+              функциональное питание.
+            </p>
+          </li>
+          <li class="product-description__item product-description__item--timeliness">
+            <img class="product-description__image" src="https://via.placeholder.com/60x60">
+            <p class="product-description__description">
+              Уже через месяц наслаждайтесь <br>
+              изменениями к лучшему <br>
+              вашего питомца!
+            </p>
+          </li>
+        </ul>
+      </section>
+      <section class="example">
+        <h2 class="example__title">Живой пример</h2>
+        <p class="example__description">
+          Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
+        </p>
+        <div class="example__wrapper">
+          <dl class="example__list">
+            <div class="example__item">
+              <dt class="example__index">снижение веса</dt>
+              <dl class="example__number">5 кг</dl>
+            </div>
+            <div class="example__item">
+              <dt class="example__index">затрачено времени</dt>
+              <dl class="example__number">60 дней</dl>
+            </div>
+            <div class="example__item example__item--nutrition">
+              <dt class="example__index">затраты на питание:</dt>
+              <dl class="example__number">15 000 руб.</dl>
+            </div>
+          </dl>
+        </div>
+        <div class="example__comparison">
+          <img class="example__comparison--before" src="https://via.placeholder.com/311x232" alt="Было">
+          <img class="example__comparison--after" src="https://via.placeholder.com/251x240" alt="Стало">
+          <div class="example__slider">
+            <p class="example__slider-before">Было</p>
+            <progress class="example__progress" value="50" max="100"></progress>
+            <div class="example__toggler">Ползунок</div>
+            <p class="example__slider-after">Стало</p>
+          </div>
+          <div></div>
+        </div>
+      </section>
+    </main>
+    <footer class="page-footer">
+      <h2 class="page-footer__announcement">
+        Приглашаем к сотрудничеству дилеров!
+      </h2>
+      <p class="page-footer__contacts page-footer__contacts--address">
+        ул. Большая <br>
+        Конюшенная, д. 19/8 <br>
+        <br>
+        Санкт-Петербург
+      </p>
+      <img class="page-footer__location" src="https://via.placeholder.com/768x400" alt="Расположение">
+      <img class="page-footer__logo" src="https://via.placeholder.com/128x24" alt="Кэт энерджи">
+      <hr>
+      <div class="page-footer__contacts page-footer__contacts--social">
+        <ul class="social__list">
+          <li class="social__item">
+            <a class="social__link social__link--vkontakte" href="#"><img src="https://via.placeholder.com/22x22" alt="Мы в Вконтакте"></a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--instagram" href="#"><img src="https://via.placeholder.com/22x22" alt="Мы в Инстаграме"></a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--facebook" href="#"><img src="https://via.placeholder.com/22x22" alt="Мы в Фейсбуке"></a>
+          </li>
+        </li>
+      </div>
+      <hr>
+      <a class="page-footer__copyright"><img src="https://via.placeholder.com/281x34" alt="HTML Academy"></a>
+    </footer>
   </body>
 </html>

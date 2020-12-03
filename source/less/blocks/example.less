@@ -1,56 +1,53 @@
 .example {
-  margin: 0;
-
   padding-top: 42px;
   padding-bottom: 25px;
 
   background-color: @background-grey;
+}
 
-  .example__number,
-  .example__item--nutrition .example__index,
-  .example__slider-before,
-  .example__slider-after {
-    text-transform: uppercase;
-  }
 
-  .example__title {
-    font-family: "Oswald", sans-serif;
-    font-size: 36px;
-    line-height: 40px;
-  }
+.example__number,
+.example__item--nutrition .example__index,
+.example__slider-before,
+.example__slider-after {
+  text-transform: uppercase;
+}
 
-  .example__description {
-    font-family: "Arial", sans-serif;
-    font-size: 14px;
-    line-height: 18px;
-  }
+.example__title {
+  font-size: 36px;
+  line-height: 40px;
+}
 
-  .example__index {
-    color: @dark-grey;
-    font-family: "Arial", sans-serif;
-    font-size: 12px;
-    line-height: 12px;
-  }
+.example__description {
+  color: @dark-grey;
+  font-family: "Arial", sans-serif;
+  line-height: 18px;
+}
 
+.example__index {
+  color: @dark-grey;
+  font-family: "Arial", sans-serif;
+  font-size: 12px;
+  line-height: 12px;
+}
+
+.example__number {
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.example__item--nutrition {
+  .example__index,
   .example__number {
     color: @black;
-    font-family: "Oswald", sans-serif;
-    font-size: 24px;
-    line-height: 24px;
-  }
-
-  .example__item--nutrition .example__index,
-  .example__item--nutrition .example__number {
-    color: @black;
-    font-family: "Oswald", sans-serif;
+    font-family: "Oswald", "Arial", sans-serif;
     font-size: 14px;
     line-height: 20px;
   }
+}
 
-  .example__slider-before,
-  .example__slider-after {
-    font-family: "Oswald", sans-serif;
-    font-size: 16px;
-    line-height: 20px;
-  }
+.example__slider-before,
+.example__slider-after {
+  font-size: 16px;
+  line-height: 20px;
 }

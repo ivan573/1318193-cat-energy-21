@@ -2,7 +2,13 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Кэт энерджи</title>
+    <link href="./css/style.css" rel="stylesheet">
+    <link rel="preload" href="fonts/oswaldregular.woff" as="font">
+    <link rel="preload" href="fonts/oswaldregular.woff2" as="font">
+    <link rel="preload" href="fonts/oswaldmedium.woff" as="font">
+    <link rel="preload" href="fonts/oswaldmedium.woff2" as="font">
   </head>
   <body class="page-body">
     <header class="page-header">
@@ -44,21 +50,21 @@
         <h2 class="visually-hidden">Каталоги</h2>
         <div class="options__wrapper">
           <ul class="options__list list">
-            <li class="list__item list_item--slim item">
-              <h3 class="item__option">Похудение</h3>
-              <p class="item__description">
+            <li class="list__point list_point--slim point">
+              <h3 class="point__option">Похудение</h3>
+              <p class="point__description">
                 Ваш кот весит больше собаки и почти утратил способность лазить по деревьям?
                 Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.
               </p>
-              <a class="item__link" href="#">Каталог Slim</a>
+              <a class="point__link" href="#">Каталог Slim</a>
             </li>
-            <li class="list__item list_item--gain item">
-              <h3 class="item__option">Набор массы</h3>
-              <p class="item__description">
+            <li class="list__point list_point--gain point">
+              <h3 class="point__option">Набор массы</h3>
+              <p class="point__description">
                 Заработать авторитет среди дворовых котов и даже собак?
                 Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!
               </p>
-              <a class="item__link" href="#">Каталог Pro</a>
+              <a class="point__link" href="#">Каталог Pro</a>
             </li>
           </ul>
         </div>
@@ -106,15 +112,15 @@
           <dl class="example__list">
             <div class="example__item">
               <dt class="example__index">снижение веса</dt>
-              <dl class="example__number">5 кг</dl>
+              <dd class="example__number">5 кг<dd>
             </div>
             <div class="example__item">
               <dt class="example__index">затрачено времени</dt>
-              <dl class="example__number">60 дней</dl>
+              <dd class="example__number">60 дней</dd>
             </div>
             <div class="example__item example__item--nutrition">
               <dt class="example__index">затраты на питание:</dt>
-              <dl class="example__number">15 000 руб.</dl>
+              <dd class="example__number">15 000 руб.</dd>
             </div>
           </dl>
         </div>

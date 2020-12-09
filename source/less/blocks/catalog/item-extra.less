@@ -1,0 +1,28 @@
+// по поводу вложенности смотри комменты в item.less
+.item-extra {
+  border-top: @border;
+  border-bottom: @border;
+}
+
+.item-extra__name {
+  h3 {
+    color: @nero-grey;
+    font-size: 16px;
+    line-height: 16px;
+  }
+
+  &:visited,
+  &:active,
+  &:hover {
+    h3 {
+      color: @nero-grey;
+    }
+  }
+}
+
+.item-extra__order-button {
+  background-color: @basic-green;
+
+  font-size: 16px;
+  line-height: 0px;
+}

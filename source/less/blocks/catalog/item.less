@@ -1,0 +1,57 @@
+.item {
+  border-top: @border;
+  border-bottom: @border;
+
+  &--show-more {
+    // возможно, тут проще переименовать класс
+    .item__name {
+      text-transform: uppercase;
+
+      color: @bronze-black;
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+}
+
+.item__name {
+  // вложенность нужна, чтобы сделать селектор более специфичным, иначе то, что global.less, его перекрывает. так можно?
+  // если что, там селектор .page-body a. .item__name - это класс ссылки.
+  h3 {
+    color: @nero-grey;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  &:visited,
+  &:active,
+  &:hover {
+    h3 {
+      color: @nero-grey;
+    }
+  }
+}
+
+.item__order-button {
+  background-color: @basic-green;
+
+  font-size: 16px;
+  line-height: 0px;
+}
+
+.item__tagline {
+  font-family: "Arial", sans-serif;
+  color: @dark-grey;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.item__show-more-button {
+  background-color: @basic-grey;
+
+  font-family: "Oswald", "Arial", sans-serif;
+  color: @dark-grey;
+  font-size: 16px;
+  // пока закомментил, а то кнопка уродливо скукоживается
+  // line-height: 0px;
+}

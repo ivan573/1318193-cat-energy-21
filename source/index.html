@@ -48,7 +48,7 @@
       </section>
       <section class="page-main__options options">
         <h2 class="visually-hidden">Каталоги</h2>
-        <div class="options__wrapper">
+        <div class="options__wrapper"> <!-- мне кажется эта обертка тут бесполезна -->
           <ul class="options__list list">
             <li class="list__point list_point--slim point">
               <h3 class="point__option">Похудение</h3>
@@ -104,11 +104,11 @@
       </section>
       <section class="page-main__example example">
         <h2 class="example__title">Живой пример</h2>
-        <p class="example__description">
-          Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim.
-          Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
-        </p>
         <div class="example__wrapper">
+          <p class="example__description">
+            Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim.
+            Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
+          </p>
           <dl class="example__list">
             <div class="example__item">
               <dt class="example__index">снижение веса</dt>
@@ -123,48 +123,55 @@
               <dd class="example__number">15 000 руб.</dd>
             </div>
           </dl>
-        </div>
-        <div class="example__comparison">
-          <img class="example__comparison--before" src="https://via.placeholder.com/311x232" width="311" height="232" alt="Было">
-          <img class="example__comparison--after" src="https://via.placeholder.com/251x240" width="251" height="240" alt="Стало">
-          <div class="example__slider">
-            <p class="example__slider-before">Было</p>
-            <progress class="example__progress" value="50" max="100"></progress>
-            <button class="example__toggler" type="button">Ползунок</div>
-            <p class="example__slider-after">Стало</p>
+          <div class="example__comparison">
+            <!-- ширина картинки и br - временные решения -->
+            <img class="example__comparison--before" src="https://via.placeholder.com/311x232" width="251" height="232" alt="Было">
+            <br>
+            <img class="example__comparison--after" src="https://via.placeholder.com/251x240" width="251" height="240" alt="Стало">
+            <div class="example__slider">
+              <p class="example__slider-before">Было</p>
+              <progress class="example__progress" value="50" max="100"></progress>
+              <button class="example__toggler" type="button">
+                <span class="visually-hidden">Ползунок</span>
+              </button>
+              <p class="example__slider-after">Стало</p>
+            </div>
           </div>
-          <div></div>
         </div>
       </section>
     </main>
     <footer class="page-footer">
-      <h2 class="page-footer__announcement">
-        Приглашаем к сотрудничеству дилеров!
-      </h2>
-      <p class="page-footer__address">
-        ул. Большая
-        Конюшенная, д. 19/8
-        <br>
-        Санкт-Петербург
-      </p>
-      <div class="page-footer__location"></div>
-      <img class="page-footer__logo" src="https://via.placeholder.com/128x24" width="128" height="24" alt="Кэт энерджи">
-      <div class="page-footer__social social">
-        <ul class="social__list">
-          <li class="social__item social__item--vkontakte">
-            <a class="social__link" href="#"><img src="https://via.placeholder.com/23x16" width="23" height="16" alt="Мы в Вконтакте"></a>
-          </li>
-          <li class="social__item  social__item--instagram">
-            <a class="social__link" href="#"><img src="https://via.placeholder.com/16x16" width="16" height="16" alt="Мы в Инстаграме"></a>
-          </li>
-          <li class="social__item  social__item--facebook">
-            <a class="social__link" href="#"><img src="https://via.placeholder.com/22x22" width="22" height="22" alt="Мы в Фейсбуке"></a>
-          </li>
-        </li>
+      <div class="page-footer__address-wrapper">
+        <h2 class="page-footer__announcement">
+          Приглашаем к сотрудничеству дилеров!
+        </h2>
+        <p class="page-footer__address">
+          ул. Большая
+          Конюшенная, д. 19/8
+          <br>
+          Санкт-Петербург
+        </p>
       </div>
-      <a class="page-footer__copyright" href="https://htmlacademy.ru/intensive/adaptive">
-        <img src="https://via.placeholder.com/281x34" width="281" height="34" alt="HTML Academy">
-      </a>
+      <div class="page-footer__location"></div>
+      <div class="page-footer__wrapper">
+        <img class="page-footer__logo" src="https://via.placeholder.com/128x24" width="128" height="24" alt="Кэт энерджи">
+        <div class="page-footer__social social">
+          <ul class="social__list">
+            <li class="social__item social__item--vkontakte">
+              <a class="social__link" href="#"><img src="https://via.placeholder.com/23x16" width="23" height="16" alt="Мы в Вконтакте"></a>
+            </li>
+            <li class="social__item  social__item--instagram">
+              <a class="social__link" href="#"><img src="https://via.placeholder.com/16x16" width="16" height="16" alt="Мы в Инстаграме"></a>
+            </li>
+            <li class="social__item  social__item--facebook">
+              <a class="social__link" href="#"><img src="https://via.placeholder.com/22x22" width="22" height="22" alt="Мы в Фейсбуке"></a>
+            </li>
+          </li>
+        </div>
+        <a class="page-footer__copyright" href="https://htmlacademy.ru/intensive/adaptive">
+          <img src="https://via.placeholder.com/281x34" width="281" height="34" alt="HTML Academy">
+        </a>
+      </div>
     </footer>
   </body>
 </html>

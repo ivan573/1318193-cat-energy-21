@@ -5,4 +5,25 @@
   font-family: "Oswald Medium", sans-serif;
   font-size: 20px;
   line-height: 20px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (max-width: @mobile-width-only) {
+    margin-bottom: 198px; // нужно чтобы содержимое меню не накладывалось на то что ниже
+  }
+}
+
+// @media (min-width: @tablet-width) {
+//   .page-header__logo-name {
+//     &:extend(.visually-hidden);
+//   }
+// }
+
+.page-header__logo-name {
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }

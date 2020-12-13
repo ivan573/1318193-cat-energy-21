@@ -1,5 +1,5 @@
 .page-main {
-  padding: 27px 20px 25px;
+  padding: 0 20px;
 
   &--form,
   &--catalog {
@@ -13,6 +13,10 @@
     a:hover {
       color: @white;
     }
+  }
+
+  @media (max-width: @mobile-width-only) {
+    border-top: @border;
   }
 }
 

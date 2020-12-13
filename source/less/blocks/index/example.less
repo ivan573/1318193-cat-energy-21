@@ -1,10 +1,11 @@
 .example {
-  padding-top: 42px;
-  padding-bottom: 25px;
+  margin: 0 -20px;
+  padding: 27px 20px 25px;
 
-  background-color: @background-grey;
+  @media (max-width: @mobile-width-only) {
+    background-color: @background-grey;
+  }
 }
-
 
 .example__number,
 .example__item--nutrition .example__index,
@@ -14,6 +15,8 @@
 }
 
 .example__title {
+  margin: 0;
+
   font-size: 36px;
   line-height: 40px;
 }
@@ -22,6 +25,29 @@
   color: @dark-grey;
   font-family: "Arial", sans-serif;
   line-height: 18px;
+}
+
+.example__wrapper {
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    background-color: @background-grey;
+  }
+}
+
+.example__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  text-align: center;
+
+  // так можно? а то совместить max-width для мобилы а потом min-width для компа не выходит
+  // если да то я бы создал переменную tablet-width-max
+  @media (min-width: @tablet-width) and (max-width: 1439px) { //
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .example__index {
@@ -37,6 +63,9 @@
 }
 
 .example__item--nutrition {
+  grid-column-start: 1;
+  grid-column-end: 3;
+
   .example__index,
   .example__number {
     color: @black;
@@ -44,6 +73,27 @@
     font-size: 14px;
     line-height: 20px;
   }
+
+  @media (min-width: @tablet-width) {
+    margin-left: 125px;
+  }
+}
+
+.example__comparison {
+  background-color: @background-grey;
+
+  @media (min-width: @desktop-width) {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 2;
+  }
+}
+
+.example__slider {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 .example__slider-before,

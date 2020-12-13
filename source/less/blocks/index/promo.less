@@ -1,25 +1,57 @@
 .promo {
+  margin: 0 -20px;
   padding-top: 27px;
-  padding-bottom: 20px;
 
-  background-color: @light-green;
+  @media (max-width: @mobile-width-only) {
+    color: @white;
+  }
+
   background-image: url("../../img/promo-background-image.jpg");
+  background-position: top center;
   background-repeat: no-repeat;
 
-  color: @white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 83px;
+
+    background-image: none;
+
+    align-items: flex-start;
+  }
 }
 
 .promo__title {
+  margin-top: 0;
+
   font-size: 36px;
   line-height: 36px;
-
-  text-align: center;
 }
 
 .promo__tagline {
+  margin-top: 0;
+  margin-bottom: 29px;
+
   text-transform: uppercase;
 
   line-height: 14px;
+}
+
+.promo__product-image {
+  margin-bottom: 3px;
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    margin-top: 341px;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    top: 0; // тут не понял. вроде как относительно окна браузера должно рассчитаться.
+    right: 0;
+  }
 }
 
 .promo__pick-program-button {
@@ -29,4 +61,8 @@
   color: @white;
   font-size: inherit;
   line-height: 18px;
+
+  @media (min-width: @tablet-width) {
+    order: 2;
+  }
 }

@@ -3,11 +3,25 @@
   padding-bottom: 22px;
 
   background-color: @basic-grey;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.page-footer__announcement,
-.page-footer__address {
+
+.page-footer__address-wrapper {
+  padding: 28px 19px 36px;
   background-color: @white;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    // дальше там уже относительно карты укажу
+  }
 }
 
 .page-footer__announcement {
@@ -22,4 +36,28 @@
   color: @dark-grey;
   font-family: "Arial", sans-serif;
   line-height: 20px;
+}
+
+.page-footer__wrapper {
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: row;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 57px;
+  }
+}
+
+.page-footer__logo {
+  padding-top: 39px;
+  padding-bottom: 32px;
+}
+
+.page-footer__copyright {
+  img {
+    margin-top: 22px;
+  }
 }

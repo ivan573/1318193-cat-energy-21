@@ -1,3 +1,14 @@
-.list__item {
-  background-color: @basic-grey;
+.list {
+  padding: 0;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 526px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 267px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }

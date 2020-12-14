@@ -2,9 +2,7 @@
   margin: 0 -20px;
   padding-top: 27px;
 
-  @media (max-width: @mobile-width-only) {
-    color: @white;
-  }
+  color: @white;
 
   background-image: url("../../img/promo-background-image.jpg");
   background-position: top center;
@@ -15,11 +13,27 @@
   align-items: center;
 
   @media (min-width: @tablet-width) {
+    padding-bottom: 526px;
     padding-left: 83px;
+
+    color: inherit;
 
     background-image: none;
 
     align-items: flex-start;
+  }
+
+  @media (min-width: @desktop-width) {
+    // кто из вас знает как сделать это элегантнее, первый брось в меня камень
+    margin-top: -96px;
+
+    padding-top: 96px;
+    padding-bottom: 267px;
+
+    background-image: url("../../img/promo-background-image.jpg");
+    background-size: 720px 694px;
+    background-position: top -96px right;
+    background-repeat: no-repeat;
   }
 }
 
@@ -44,13 +58,17 @@
 
   @media (min-width: @tablet-width) {
     position: absolute;
-    margin-top: 341px;
+    top: 262px;
+
+    z-index: -1;
   }
 
   @media (min-width: @desktop-width) {
     position: absolute;
-    top: 0; // тут не понял. вроде как относительно окна браузера должно рассчитаться.
-    right: 0;
+    top: 96px;
+    right: 328px;
+
+    z-index: 0;
   }
 }
 

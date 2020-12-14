@@ -1,6 +1,8 @@
 .page-main {
   padding: 0 20px;
 
+  border-top: @border;
+
   &--form,
   &--catalog {
     border-top: 1px solid @border-grey;
@@ -15,8 +17,8 @@
     }
   }
 
-  @media (max-width: @mobile-width-only) {
-    border-top: @border;
+  @media (min-width: @tablet-width) {
+    border: none;
   }
 }
 

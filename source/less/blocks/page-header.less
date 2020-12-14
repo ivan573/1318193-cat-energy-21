@@ -1,4 +1,5 @@
 .page-header {
+  margin-bottom: 198px;
   padding: 12px 23px 24px 20px;
 
   text-transform: uppercase;
@@ -7,20 +8,13 @@
   line-height: 20px;
 
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
 
-  @media (max-width: @mobile-width-only) {
-    margin-bottom: 198px; // нужно чтобы содержимое меню не накладывалось на то что ниже
+  @media (min-width: @tablet-width) {
+    margin: 0;
   }
 }
-
-// @media (min-width: @tablet-width) {
-//   .page-header__logo-name {
-//     &:extend(.visually-hidden);
-//   }
-// }
 
 .page-header__logo-name {
   @media (min-width: @tablet-width) {

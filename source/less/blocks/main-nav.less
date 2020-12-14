@@ -1,11 +1,3 @@
-// экстенд не осилил/не понял
-
-// @media (min-width: @tablet-width) { // почему-то если вложить экстенд в медиа то линтер ругается
-//   .main-nav__toggle {
-//     &:extend(.visually-hidden); // почему-то не работает
-//   }
-// }
-
 .main-nav__toggle {
   @media (min-width: @tablet-width) {
     display: none;
@@ -15,9 +7,11 @@
 .main-nav__wrapper {
   width: 100%;
 
-  @media (max-width: @mobile-width-only) {
-    position: absolute; // нужно чтобы вытащить элементы меню из флекса
-    left: 0;
+  position: absolute;
+  left: 0;
+
+  @media (min-width: @tablet-width) {
+    position: static;
   }
 }
 
@@ -26,22 +20,21 @@
 
   @media (min-width: @tablet-width) {
     display: flex;
-    flex-direction: row;
   }
 }
 
 .main-nav__item {
-  @media (max-width: @mobile-width-only) {
-    text-align: center;
-
     padding-top: 22px;
     padding-bottom: 24px;
 
     border-top: @border;
-  }
+
+    text-align: center;
 
   @media (min-width: @tablet-width) {
     margin-left: 34px;
+    padding: 0;
+    border: 0;
   }
 
   @media (min-width: @desktop-width) {

@@ -3,7 +3,6 @@
   border-bottom: @border;
 
   &--show-more {
-    // возможно, тут проще переименовать класс
     .item__name {
       text-transform: uppercase;
 
@@ -15,8 +14,6 @@
 }
 
 .item__name {
-  // вложенность нужна, чтобы сделать селектор более специфичным, иначе то, что global.less, его перекрывает. так можно?
-  // если что, там селектор .page-body a. .item__name - это класс ссылки.
   h3 {
     color: @nero-grey;
     font-size: 16px;

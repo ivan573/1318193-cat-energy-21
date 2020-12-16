@@ -1,10 +1,19 @@
-.example {
-  padding-top: 42px;
-  padding-bottom: 25px;
-
-  background-color: @background-grey;
+.grid-list() {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  text-align: center;
 }
 
+.example {
+  margin: 0 -20px;
+  padding: 27px 20px 25px;
+
+  background-color: @background-grey;
+
+  @media (min-width: @tablet-width) {
+    background-color: @white;
+  }
+}
 
 .example__number,
 .example__item--nutrition .example__index,
@@ -14,6 +23,8 @@
 }
 
 .example__title {
+  margin: 0;
+
   font-size: 36px;
   line-height: 40px;
 }
@@ -22,6 +33,28 @@
   color: @dark-grey;
   font-family: "Arial", sans-serif;
   line-height: 18px;
+}
+
+.example__wrapper {
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    background-color: @background-grey;
+  }
+}
+
+.example__list {
+  .grid-list;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media (min-width: @desktop-width) {
+    .grid-list;
+  }
 }
 
 .example__index {
@@ -37,6 +70,9 @@
 }
 
 .example__item--nutrition {
+  grid-column-start: 1;
+  grid-column-end: 3;
+
   .example__index,
   .example__number {
     color: @black;
@@ -44,6 +80,26 @@
     font-size: 14px;
     line-height: 20px;
   }
+
+  @media (min-width: @tablet-width) {
+    margin-left: 125px;
+  }
+}
+
+.example__comparison {
+  background-color: @background-grey;
+
+  @media (min-width: @desktop-width) {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 2;
+  }
+}
+
+.example__slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .example__slider-before,

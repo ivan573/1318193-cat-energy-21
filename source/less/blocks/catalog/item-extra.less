@@ -1,6 +1,16 @@
 .item-extra {
   border-top: @border;
   border-bottom: @border;
+
+  @media (min-width: @tablet-width) {
+    border: @border;
+  }
+}
+
+.item-extra__data {
+  @media (min-width: @tablet-width) {
+    display: flex;
+  }
 }
 
 .item-extra__name {

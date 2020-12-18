@@ -1,7 +1,16 @@
-.data__unit,
-.data__value {
+.data {
   font-family: "Arial", sans-serif;
   color: @dark-grey;
   font-size: 12px;
   line-height: 16px;
+}
+
+.data__weight,
+.data__taste,
+.data__price {
+  display: flex;
+
+  @media (min-width: @tablet-width) {
+    border-bottom: @border;
+  }
 }

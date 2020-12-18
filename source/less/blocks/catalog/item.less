@@ -2,6 +2,10 @@
   border-top: @border;
   border-bottom: @border;
 
+  @media (min-width: @tablet-width) {
+    background-color: @basic-grey;
+  }
+
   &--show-more {
     .item__name {
       text-transform: uppercase;
@@ -9,6 +13,12 @@
       color: @bronze-black;
       font-size: 16px;
       line-height: 20px;
+    }
+
+    @media (min-width: @tablet-width) {
+      background-color: inherit;
+
+      border: @border;
     }
   }
 }

@@ -1,5 +1,13 @@
 .cat-owner {
   .form-block;
+
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .cat-owner__block-title {

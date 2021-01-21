@@ -1,16 +1,21 @@
+@index-width: 86px;
+@index-width-tablet: 114px;
+
 .grid-list() {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  text-align: center;
+  // text-align: center;
 }
 
 .example {
   margin: 0 -20px;
-  padding: 27px 20px 25px;
+  padding: 27px 21px 20px 20px;
 
   background-color: @background-grey;
 
   @media (min-width: @tablet-width) {
+    padding-top: 18px;
+
     background-color: @white;
   }
 }
@@ -25,14 +30,36 @@
 .example__title {
   margin: 0;
 
+  padding-bottom: 19px;
+
   font-size: 36px;
   line-height: 40px;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 11px;
+    margin-bottom: 44px;
+
+    font-size: 60px;
+    line-height: 60px;
+  }
 }
 
 .example__description {
+  margin-bottom: 25px;
+
   color: @dark-grey;
   font-family: "Arial", sans-serif;
   line-height: 18px;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 10px;
+    margin-bottom: 54px;
+
+    padding-right: 20px;
+
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 
 .example__wrapper {
@@ -47,6 +74,10 @@
 .example__list {
   .grid-list;
 
+  // align-items: center;
+
+  margin-bottom: 9px;
+
   @media (min-width: @tablet-width) {
     display: flex;
     justify-content: space-between;
@@ -57,21 +88,92 @@
   }
 }
 
+.example__item {
+  display: flex;
+  flex-direction: column;
+
+  position: relative;
+
+  text-align: center;
+  justify-content: center;
+
+  width: 124px;
+  height: 64px;
+
+  border: @border;
+  border-radius: 3px;
+
+  &:nth-child(odd) {
+    justify-self: start;
+  }
+
+  &:nth-child(even) {
+    justify-self: end;
+  }
+
+  &:last-child {
+    justify-self: center;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-left: 10px;
+    // почему-то margin влияет на ширину
+    // margin-right: 20px;
+
+    width: 450px; //162px;
+    height: 70px;
+  }
+}
+
 .example__index {
   color: @dark-grey;
   font-family: "Arial", sans-serif;
   font-size: 12px;
   line-height: 12px;
+
+  width: @index-width;
+  background-color: @background-grey;
+
+  position: absolute;
+  top: 46px;
+  left: calc(50% - @index-width / 2);
+
+  @media (min-width: @tablet-width) {
+    font-size: 14px;
+    line-height: 14px;
+
+    background-color: @white;
+
+    width: @index-width-tablet;
+
+    top: 62px;
+    left: calc(50% - @index-width-tablet / 2);
+  }
 }
 
 .example__number {
+  margin: 0;
+
   font-size: 24px;
   line-height: 24px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+    line-height: 37px;
+  }
 }
 
 .example__item--nutrition {
+  margin-top: 34px;
+
+  flex-direction: row;
+
+  width: 100%;
+
   grid-column-start: 1;
   grid-column-end: 3;
+
+  border: none;
 
   .example__index,
   .example__number {
@@ -81,8 +183,18 @@
     line-height: 20px;
   }
 
+  .example__index {
+    width: auto;
+    background-color: transparent;
+
+    position: static;
+  }
+
   @media (min-width: @tablet-width) {
+    margin-top: 0;
     margin-left: 125px;
+
+    display: inline;
   }
 }
 
@@ -97,6 +209,8 @@
 }
 
 .example__slider {
+  margin-top: 11px;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -106,4 +220,9 @@
 .example__slider-after {
   font-size: 16px;
   line-height: 20px;
+}
+
+.example__progress {
+  width: 84px;
+  height: 14px;
 }

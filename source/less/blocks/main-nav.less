@@ -22,7 +22,12 @@
   }
 }
 
+.main-nav--closed .main-nav__toggle {
+  margin-bottom: -1px;
+}
+
 .main-nav--closed .main-nav__toggle::before {
+
   content: url("../img/menu-toggle-closed.svg");
 }
 
@@ -43,6 +48,7 @@
 
 .main-nav__list {
   padding: 0;
+  padding-top: 1px;
 
   border-bottom: @border;
 
@@ -50,6 +56,8 @@
     display: flex;
 
     border-bottom: none;
+
+    padding: 0;
   }
 }
 
@@ -59,6 +67,7 @@
 
 .main-nav__item {
   padding-top: 22px;
+  padding-right: 1px;
   padding-bottom: 23px;
 
   border-top: @border;
@@ -66,9 +75,13 @@
   text-align: center;
 
   @media (min-width: @tablet-width) {
-    margin-left: 34px;
+    margin-left: 37px;
     padding: 0;
     border: 0;
+  }
+
+  a {
+    .link-states;
   }
 }
 

@@ -1,31 +1,171 @@
 .point {
-  padding-bottom: 18px;
+  padding-right: 20px;
+  padding-bottom: 21px;
   padding-left: 20px;
 
   background-color: @background-grey;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 10px 30px;
+    padding: 78px 62px 58px 52px;
+  }
+
+  &--slim {
+    @media (min-width: @tablet-width) {
+      background-image: url("https://via.placeholder.com/200x211");
+      background-size: 200px 211px;
+      background-repeat: no-repeat;
+      background-position: top 78px right 62px;
+    }
+  }
+
+  &--gain {
+    @media (min-width: @tablet-width) {
+      background-image: url("https://via.placeholder.com/268x200");
+      background-size: 268px 200px;
+      background-repeat: no-repeat;
+      background-position: top 91px right 28px;
+    }
+  }
 }
 
 .point__option {
+  margin-top: 20px;
+
+  padding-top: 30px;
+  padding-bottom: 5px;
+  padding-left: 71px;
+
   text-transform: uppercase;
 
   font-size: 24px;
   line-height: 37px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    padding: 0;
+    padding-left: 1px;
+
+    font-size: 36px;
+    line-height: 36px;
+  }
+}
+
+.point--slim .point__option {
+  background-image: url("https://via.placeholder.com/50x53");
+  background-size: 50px 53px;
+  background-repeat: no-repeat;
+  background-position: bottom -4px left 2px;
+
+  @media (min-width: @tablet-width) {
+    background-image: none;
+  }
+}
+
+.point--gain .point__option {
+  background-image: url("https://via.placeholder.com/67x50");
+  background-size: 67px 50px;
+  background-repeat: no-repeat;
+  background-position: bottom -4px left -10px;
+
+  @media (min-width: @tablet-width) {
+    background-image: none;
+  }
 }
 
 .point__description {
-  margin-bottom: 23px;
+  margin-bottom: 22px;
 
   color: @dark-grey;
 
   font-family: "Arial", sans-serif;
   line-height: 18px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 25px;
+    margin-bottom: 51px;
+
+    color: @black;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.point--slim .point__description {
+  @media (min-width: @tablet-width) {
+    margin-right: 217px;
+  }
+}
+
+.point--gain .point__description {
+  @media (min-width: @tablet-width) {
+    margin-right: 250px;
+  }
 }
 
 .point__link {
-  padding: 15px 15px 0;
+  display: block;
+
+  padding-top: 19px;
 
   font-size: 16px;
   line-height: 16px;
 
   border-top: @border;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+  }
+
+  &::after {
+    content: url("../img/point-link-arrow.svg");
+  }
+
+  &:hover {
+    &::after {
+      content: url("../img/point-link-arrow-hover.svg");
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+
+    &::after {
+      content: url("../img/point-link-arrow-hover.svg");
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+
+    // padding: 0;
+    // padding-bottom: 53px;
+
+    border: none;
+  }
+}
+
+.point--slim .point__link {
+  &::after {
+    padding-left: 15px;
+  }
+
+  @media (min-width: @tablet-width) {
+    &::after {
+      padding-left: 25px;
+    }
+  }
+}
+
+.point--gain .point__link {
+  &::after {
+    padding-left: 17px;
+  }
+
+  @media (min-width: @tablet-width) {
+    &::after {
+      padding-left: 27px;
+    }
+  }
 }

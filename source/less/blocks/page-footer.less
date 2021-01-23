@@ -7,6 +7,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  position: relative;
 }
 
 .page-footer__address-wrapper {
@@ -23,8 +25,14 @@
   }
 
   @media (min-width: @desktop-width) {
+    padding: 0;
+
     position: absolute;
-    // дальше там уже относительно карты укажу
+    left: 110px;
+    top: 95px;
+
+    width: 570px;
+    height: 201px;
   }
 }
 
@@ -45,6 +53,11 @@
     font-size: 20px;
     line-height: 25px;
   }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 48px;
+    padding-left: 76px;
+  }
 }
 
 .page-footer__address {
@@ -62,6 +75,13 @@
     font-size: 16px;
 
     text-align: right;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 48px;
+    padding-right: 90px;
+
+    text-align: left;
   }
 }
 
@@ -93,11 +113,14 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-top: 57px;
+    padding-top: 31px;
+    padding-bottom: 16px;
   }
 }
 
 .page-footer__logo {
+  .link-states;
+
   margin-bottom: -4px;
   padding-top: 35px;
   padding-bottom: 32px;
@@ -109,9 +132,15 @@
     padding-top: 2px;
     padding-left: 3.9%;
   }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 7.6%;
+  }
 }
 
 .page-footer__copyright {
+  .link-states;
+
   img {
     margin-top: 22px;
 
@@ -126,5 +155,10 @@
   @media (min-width: @tablet-width) {
     padding-top: 1px;
     padding-right: 3.9%;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 8px;
+    padding-right: 7.6%;
   }
 }

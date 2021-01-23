@@ -21,9 +21,10 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-top: 33px;
+    padding: 49px 110px 0 110px;
 
-    padding: 0 111px 0 110px;
+    font-size: 20px;
+    line-height: 30px;
   }
 }
 
@@ -44,14 +45,19 @@
 
   img {
     @media (min-width: @tablet-width) {
+      margin-top: -9px;
+
       width: 174px;
       height: 52px;
     }
-  }
 
-  // @media (min-width: @desktop-width) {
-  //   // padding-top: 20px;
-  // }
+    @media (min-width: @desktop-width) {
+      margin-top: 0;
+
+      width: 202px;
+      height: 59px;
+    }
+  }
 }
 
 .page-header__logo-name {

@@ -77,11 +77,28 @@
   @media (min-width: @tablet-width) {
     margin-left: 35px;
     padding: 0;
+
     border: 0;
   }
 
   a {
     .link-states;
+  }
+
+  @media (min-width: @tablet-width) {
+    &--active {
+      padding-bottom: 8px;
+
+      border-bottom: 2px solid @basic-green;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &--active {
+      padding-bottom: 6px;
+
+      border-color: @white;
+    }
   }
 }
 

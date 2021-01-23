@@ -214,6 +214,10 @@
     font-size: 30px;
     line-height: 37px;
   }
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 4px;
+  }
 }
 
 .example__item--nutrition {
@@ -333,16 +337,25 @@
 }
 
 .example__slider {
-  margin-top: 11px;
+  margin-top: 12px;
+  margin-left: 6px;
 
   display: flex;
   justify-content: center;
   align-items: center;
 
   @media (min-width: @tablet-width) {
-    padding-bottom: 50px;
+    margin-left: 4px;
+
+    padding-bottom: 49px;
 
     z-index: 1;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 44px;
+
+    justify-content: left;
   }
 }
 
@@ -360,13 +373,93 @@
 }
 
 .example__progress {
-  width: 84px;
+  margin-left: 18px;
+  margin-right: 17px;
+
+  width: 31%;
   height: 14px;
 
   z-index: inherit;
 
+  position: relative;
+
+  padding: 6px;
+  border: @border;
+  border-radius: 6px;
+  background-color: @white;
+
+  &::after {
+    @height: 6px;
+
+    content: "";
+    position: absolute;
+    width: 42%;
+    height: @height;
+    background-color: @basic-green;
+    border-radius: @height;
+    top: calc(50% - @height / 2);
+    left: 5px;
+  }
+
   @media (min-width: @tablet-width) {
-    width: 428px;
+    margin: 0 3%;
+
+    width: 56%;
     height: 6px;
+
+    padding: 2px;
+    border: @border;
+    border-color: @progress-grey;
+    background-color: @progress-grey;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 63.5%;
+  }
+}
+
+.example__toggler {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    @side: 34px;
+
+    display: inline;
+    position: absolute;
+
+    left: calc(50% - @side / 2);
+
+    z-index: 1;
+
+    width: @side;
+    height: @side;
+
+    border: 1px solid @progress-grey;
+    border-radius: 50%;
+
+    background-color: @white;
+
+    filter: drop-shadow(0px 1px 3px @shadow-black);
+
+    &::after {
+      @smaller-side: 8px;
+
+      content: "";
+      position: absolute;
+      width: @smaller-side;
+      height: @smaller-side;
+      background-color: @basic-green;
+      border-radius: 4px;
+      bottom: calc(50% - @smaller-side / 2);
+      left: calc(50% - @smaller-side / 2);
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 42.9%;
   }
 }

@@ -13,7 +13,7 @@
   align-items: center;
 
   @media (min-width: @tablet-width) {
-    padding-top: 17px;
+    padding-top: 20px;
     padding-bottom: 526px;
     padding-left: 110px;
 
@@ -25,7 +25,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-top: -130px;
+    margin-top: -127px;
 
     padding-top: 226px;
     padding-left: 182px;
@@ -109,40 +109,5 @@
 }
 
 .promo__pick-program-button {
-  background-color: @basic-green;
-
-  font-family: inherit;
-  color: @white;
-  font-size: inherit;
-  line-height: 18px;
-
-  width: 280px;
-  height: 42px;
-  border: none;
-
-  &:hover {
-    background-color: @basic-green-hover;
-  }
-
-  &:active {
-    background-color: @basic-green-hover;
-
-    span {
-      opacity: 0.3;
-    }
-  }
-
-  @media (min-width: @tablet-width) {
-    margin-left: 2px;
-
-    width: 244px;
-    height: 54px;
-
-    order: 2;
-  }
-
-  @media (min-width: @desktop-width) {
-    margin-top: 2px;
-    margin-left: 8px;
-  }
+  .green-button;
 }

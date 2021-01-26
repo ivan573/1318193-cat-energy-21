@@ -7,24 +7,24 @@
     <link href="./css/style.css" rel="stylesheet">
   </head>
   <body class="page-body">
-    <header class="page-header">
-      <a class="page-header__logo-picture" href="index.html">
+    <header class="page-header page-header--closed-menu">
+      <a class="page-header__logo-picture">
         <img src="https://via.placeholder.com/34x38" width="34" height="38" alt="Кэт энерджи - логотип">
       </a>
       <a class="page-header__logo-name">
         <img src="https://via.placeholder.com/101x18" width="101" height="18" alt="Кэт энерджи">
       </a>
-      <nav class="main-nav">
+      <nav class="main-nav main-nav--index main-nav--closed">
         <button class="main-nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
         <div class="main-nav__wrapper">
           <ul class="main-nav__list">
-            <li class="main-nav__item main-nav__item--active">
+            <li class="main-nav__item">
               <a href="index.html">Главная</a>
             </li>
-            <li class="main-nav__item">
-              <a href="catalog.html">Каталог продукции</a>
+            <li class="main-nav__item main-nav__item--active">
+              <a>Каталог продукции</a>
             </li>
             <li class="main-nav__item">
               <a href="form.html">Подбор программы</a>
@@ -269,16 +269,21 @@
     <footer class="page-footer">
       <div class="page-footer__address-wrapper">
         <h2 class="page-footer__announcement">
-          Приглашаем к сотрудничеству дилеров!
+          Приглашаем <br>
+          к сотрудничеству <br>
+          дилеров!
         </h2>
         <p class="page-footer__address">
-          ул. Большая
-          Конюшенная, д. 19/8
-          <br>
+          ул. Большая <br>
+          Конюшенная, д. 19/8 <br>
           Санкт-Петербург
         </p>
       </div>
-      <div class="page-footer__location"></div>
+      <div class="page-footer__location">
+        <iframe class="page-footer__map"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253002944!2d30.32085871603622!3d59.93871916905428!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1611180276305!5m2!1sru!2sru"
+        style="border:0;" allowfullscreen="" aria-hidden="true" tabindex="0"></iframe>
+      </div>
       <div class="page-footer__wrapper">
         <img class="page-footer__logo" src="https://via.placeholder.com/128x24" width="128" height="24" alt="Кэт энерджи">
         <div class="page-footer__social social">
@@ -292,12 +297,13 @@
             <li class="social__item  social__item--facebook">
               <a class="social__link" href="#"><img src="https://via.placeholder.com/22x22" width="22" height="22" alt="Мы в Фейсбуке"></a>
             </li>
-          </li>
+          </ul>
         </div>
         <a class="page-footer__copyright" href="https://htmlacademy.ru/intensive/adaptive">
           <img src="https://via.placeholder.com/281x34" width="281" height="34" alt="HTML Academy">
         </a>
       </div>
     </footer>
+    <script src="js/app.js"></script>
   </body>
 </html>

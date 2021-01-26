@@ -14,6 +14,6 @@ navigationToggleElement.addEventListener('click', () => {
     pageHeaderElement.classList.add('page-header--closed-menu');
 
     mainNavigationElement.classList.remove('main-nav--opened');
-    pageHeaderElement.classList.add('page-header--opened-menu');
+    pageHeaderElement.classList.remove('page-header--opened-menu');
   }
 });

@@ -1,9 +1,24 @@
 .extra-goods__heading {
-  padding-top: 28px;
-  padding-bottom: 39px;
+  margin-top: 11px;
+  margin-bottom: 35px;
 
   font-size: 24px;
   line-height: 24px;
+
+  position: relative;
+
+  &::after {
+    content: "";
+    width: 19%;
+    height: 2px;
+
+    position: absolute;
+
+    top: 15px;
+    right: -20px;
+
+    background-color: @basic-green;
+  }
 
   @media (min-width: @desktop-width) {
     position: absolute;
@@ -11,4 +26,9 @@
     // расположение пока на глаз задал. поменяю когда буду все отступы по макету делать.
     top: 800px;
   }
+}
+
+.extra-goods__catalog-extra {
+  // margin-top: 0;
+  padding: 0;
 }

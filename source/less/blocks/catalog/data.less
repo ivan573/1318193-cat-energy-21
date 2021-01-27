@@ -3,14 +3,26 @@
   color: @dark-grey;
   font-size: 12px;
   line-height: 16px;
+
+  @media (min-width: @tablet-width) {
+    width: 247px;
+  }
 }
 
 .data__weight,
 .data__taste,
 .data__price {
   display: flex;
+  justify-content: space-between;
 
   @media (min-width: @tablet-width) {
+    margin-bottom: 8px;
+
+    padding-bottom: 7px;
+
     border-bottom: @border;
+
+    font-size: 16px;
+    line-height: 16px;
   }
 }

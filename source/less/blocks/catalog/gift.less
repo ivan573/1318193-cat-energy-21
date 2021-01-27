@@ -1,19 +1,35 @@
 .gift {
-  margin-top: 39px;
-  margin-bottom: 35px;
+  margin-top: 22px;
+  margin-bottom: 18px;
 
-  padding-top: 58px;
+  padding-top: 171px;
   padding-bottom: 43px;
 
   width: 280px;
 
   background-image: url("../../img/gift-background-image.jpg");
   background-repeat: no-repeat;
+
+  position: relative;
+
+  align-self: center;
 }
 
 .gift__text {
+  padding-right: 3px;
+
   font-family: "Arial", sans-serif;
   color: @white;
   font-size: 16px;
   line-height: 20px;
+
+  text-align: center;
+
+  &::before {
+    content: url("../img/gift.svg");
+
+    position: absolute;
+    top: 58px;
+    right: 36%;
+  }
 }

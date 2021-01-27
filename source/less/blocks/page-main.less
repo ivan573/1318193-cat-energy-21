@@ -18,6 +18,10 @@
       color: @white;
     }
   }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 20px;
+  }
 }
 
 .page-main__title {
@@ -30,9 +34,10 @@
   }
 }
 
-.page-main--form .page-main__title {
+.page-main--form .page-main__title,
+.page-main--catalog .page-main__title {
   margin-top: 27px;
-  margin-bottom: 37px;
+  margin-bottom: 40px;
 
   @media (min-width: @tablet-width) {
     margin-top: 18px;
@@ -44,6 +49,12 @@
     margin-top: 60px;
     margin-left: 90px;
     margin-bottom: 56px;
+  }
+}
+
+.page-main--catalog .page-main__title {
+  @media (min-width: @tablet-width) {
+    margin-left: 10px;
   }
 }
 

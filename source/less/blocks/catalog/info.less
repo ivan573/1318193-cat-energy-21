@@ -1,6 +1,14 @@
 .info {
   display: flex;
   justify-content: space-between;
+
+  @media (min-width: @tablet-width) {
+    align-items: baseline;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 287px;
+  }
 }
 
 .info__unit,
@@ -8,8 +16,18 @@
   font-family: "Arial", sans-serif;
   color: @dark-grey;
   line-height: 14px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 20px;
+  }
 }
 
 .info__unit {
   margin-top: 13px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 1px;
+    margin-right: 50px;
+  }
 }
